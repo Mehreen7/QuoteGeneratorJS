@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+      <!-- Police Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;400&display=swap" 
+  rel="stylesheet"/>
+</head>
+<body>
+    <header>
+      <p class="logo">Quote Generator</p>
+      <h1>Words that <em>inspire</em></h1>
+      <div class="divider"></div>
+    </header>
+
+    <section class="fillters">
+        <div class="filter-group">
+            <p class="filter-label">Lenght</p>
+            <div class="chip-row">
+
+                <div class="chip">
+                    <input type="checkbox" id="len-short" value="short"/>
+                    <label for="len-short">Short</label>
+                </div>
+
+                <div class="chip">
+                    <input type="checkbox" id="len-medium" value="medium"/>
+                    <label for="len-medium">Medium</label>
+                </div>
+
+                <div class="chip">
+                    <input type="checkbox" id="len-long" value="long"/>
+                    <label for="len-long">Long</label>
+                </div>
+            </div>
+        </div>
+        <div class="filter-group">
+            <p class="filter-label">Theme</p>
+            <div class="chip-row" id="theme-row"></div>
+        </div>
+
+        <div class="filter-group">
+            <p class="filter-label">Keyword</p>
+            <input type="text" id="keyword" placeholder="e.g love, reason, time...">
+        </div>
+    </section>
+
+    <!--BOUTON GENERER-->
+    <button id="btn-generate"> Generate a quote</button>
+    <div id="output"></div>
+    
+    <footer>
+        Powered by <a href="https://api.api-ninjas.com/" target="_blank">api-ninjas</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
