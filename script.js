@@ -74,6 +74,8 @@ function renderQuote(quote) {
             <p class="quote-author">— ${quote.author}</p>
         </div>
     `;
+
+
 }
 
 /* MAIN */
@@ -104,7 +106,7 @@ async function generateQuote() {
         quotes.forEach(q => {
             console.log(q.quote, "| longueur :", q.quote.length);
         });
-        const filtered = quotes.filter(q => matchesFilters(q, selectedLengths, keyword));
+        const filtered = quotes.filter(q => matchesFilters(q, selectedLengths));
         console.log("=== FILTRAGE ===");
         console.log("quotes reçues :", quotes.length);
         console.log("quotes filtrées :", filtered.length);
@@ -130,7 +132,7 @@ async function generateQuote() {
 
     } catch (error) {
         console.error(error);
-        output.innerHTML = `<p class="message">Erreur lors de la récupération 😢</p>`;
+        output.innerHTML = `<p class="message">Pas de citations trouvées ! Veuillez changer vos filtres 😉</p>`;
     } finally {
         btn.disabled = false;
     }
